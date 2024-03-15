@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <center>
+        <h1 align="center">Counter App</h1>
+    <button onclick="increment()" style="font-size: 30px;">+</button>
+    <span id="msg" type="button"></span>
+    <button onclick="decrement()" style="font-size: 35px;">-</button>
+    </center>
+    <button id="hello" onclick="Reset()">Reset</button>
+
+</body>
+</html>
+
+<style>
+    h1{
+        font-size: 50px;
+    }
+    button{
+        width: 150px;
+        height: 70px;
+        margin: 60px;
+        background-color: green;
+        color:white;
+        font-size: 30px;
+        border: none;
+        border-radius: 10px;
+
+    }
+    #hello{
+        margin: 0 auto;
+        display: block;
+    }
+    #msg{
+        font-size: 30px;
+        background-color: papayawhip;
+        width: 150px;
+        height: 70px;
+        line-height: 70px;
+        display: inline-block;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+    
+</style>
+
+
+<script type="text/javascript">
+    let cnt=0;
+    document.getElementById('msg').innerHTML=`${cnt}`
+
+    const increment = () =>{
+        cnt++;
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+
+    const decrement = () =>{
+        if(cnt>0){
+        cnt--;
+        }
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+
+    const Reset = () =>{
+        cnt=0;
+        document.getElementById('msg').innerHTML=`${cnt}`
+    }
+</script>
